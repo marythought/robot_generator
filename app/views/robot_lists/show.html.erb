@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @robot_list.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @robot_list.description %>
+</p>
+
+<p>
+  <strong>Arms:</strong>
+  <%= @robot_list.arms %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @robot_list.material %>
+</p>
+
+<p>
+  <strong>Fuel:</strong>
+  <%= @robot_list.fuel %>
+</p>
+
+<p>
+  <strong>Voice box:</strong>
+  <%= @robot_list.voice_box %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @robot_list.notes %>
+</p>
+
+<%= link_to 'Edit', edit_robot_list_path(@robot_list) %> |
+<%= link_to 'Back', robot_lists_path %>
