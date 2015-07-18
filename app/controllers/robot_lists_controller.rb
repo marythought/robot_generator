@@ -28,7 +28,7 @@ class RobotListsController < ApplicationController
 
     respond_to do |format|
       if @robot_list.save
-        format.html { redirect_to @robot_list, notice: 'Robot list was successfully created.' }
+        format.html { redirect_to @robot_list, notice: 'Robot was successfully created.' }
         format.json { render :show, status: :created, location: @robot_list }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RobotListsController < ApplicationController
   def update
     respond_to do |format|
       if @robot_list.update(robot_list_params)
-        format.html { redirect_to @robot_list, notice: 'Robot list was successfully updated.' }
+        format.html { redirect_to @robot_list, notice: 'Robot was successfully updated.' }
         format.json { render :show, status: :ok, location: @robot_list }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RobotListsController < ApplicationController
   def destroy
     @robot_list.destroy
     respond_to do |format|
-      format.html { redirect_to robot_lists_url, notice: 'Robot list was successfully destroyed.' }
+      format.html { redirect_to robot_lists_url, notice: 'Robot was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

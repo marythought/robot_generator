@@ -2,9 +2,9 @@
 
 <h1>Robots!</h1>
 
-<table>
+<table id="attributes">
   <thead>
-    <tr>
+    <tr id="attr_headers">
       <th>Name</th>
       <th>Description</th>
       <th>Arms</th>
@@ -16,17 +16,16 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="attr_details">
     <% @robot_lists.each do |robot_list| %>
       <tr>
-        <td><%= robot_list.name %></td>
+        <td><%= link_to robot_list.name, robot_list %></td>
         <td><%= robot_list.description %></td>
         <td><%= robot_list.arms %></td>
         <td><%= robot_list.material %></td>
         <td><%= robot_list.fuel %></td>
         <td><%= robot_list.voice_box %></td>
         <td><%= robot_list.notes %></td>
-        <td><%= link_to 'Show', robot_list %></td>
         <td><%= link_to 'Edit', edit_robot_list_path(robot_list) %></td>
         <td><%= link_to 'Destroy', robot_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -4,7 +4,7 @@ describe "Creating robot lists" do
   it "redirects to the robot list index page on success" do
     visit "/robot_lists"
     click_link "add a new robot"
-    expect(page).to have_content("New Robot List")
+    expect(page).to have_content("New Robot")
 
     fill_in "Name", with: "Larry"
     fill_in "Description", with: "Friendly robot"
@@ -18,7 +18,7 @@ describe "Creating robot lists" do
 
     visit "/robot_lists"
     click_link "add a new robot"
-    expect(page).to have_content("New Robot List")
+    expect(page).to have_content("New Robot")
 
     fill_in "Name", with: ""
     fill_in "Description", with: "Friendly robot"
